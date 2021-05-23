@@ -1,2 +1,1 @@
-# Kelompok-12_Soetta-Loka
-Tubes Prokom 2021
+# Rancangan-Tugas-Prokom-Kelompok-12
