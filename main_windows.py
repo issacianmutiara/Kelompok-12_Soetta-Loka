@@ -24,6 +24,12 @@ with open('data_maskapai.csv') as file_csv:
         if row[0] != 'NO':
             maskapai.append(row)
 
+kelas   = []
+with open('kelas_maskapai.csv') as file_csv:
+    reader_csv = reader(file_csv, delimiter=',')
+    for row in reader_csv:
+        if row[0] != 'NO':
+            maskapai.append(row)
 
 def frame_1(frame):
     frame.tkraise()
@@ -76,10 +82,10 @@ label_noktp = Label(main_frame, text='No. KTP', bg='black', fg='#8cc53d', font='
 label_alamat = Label(main_frame, text='Alamat', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=4, column=0, sticky='w')
 
-input_nama = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
-input_ttl = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
-input_noktp = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
-input_alamat = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
+input_nama = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
+input_ttl = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
+input_noktp = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
+input_alamat = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
 input_nama.grid(row=1, column=1, columnspan=3)
 input_ttl.grid(row=2, column=1, columnspan=3)
 input_noktp.grid(row=3, column=1, columnspan=3)
@@ -98,8 +104,8 @@ def cek_data1():
     Label(main_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='No. KTP').place(x=0, y=252)
     Label(main_frame, text=': ' + input_noktp.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
         .place(x=120, y=252)
-    Label(main_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='No. Keanggotaan').place(x=0, y=277)
-    Label(main_frame, text=': ' + input_anggota.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
+    Label(main_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Alamat').place(x=0, y=277)
+    Label(main_frame, text=': ' + input_alamat.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
         .place(x=120, y=277)
 #    tombol2 = Button(main_frame, text='Input', width=10, command=lambda: frame_1(main_frame)).place(x=120, y=305)
 
@@ -134,7 +140,12 @@ def ganti_list_waktu_dan_maskapai(e):
     for row in maskapai:
         if row[2] == tujuan_input.get():
             values.append(row[1] + ' (rute ' + row[2] +')')
-    maskapai_input['values'] = values    
+    maskapai_input['values'] = values
+
+#def harga_kelas_maskapai(e):
+    values = []
+
+
 
 jenis_input = ttk.Combobox(input_frame, width=37)
 jenis_input['values'] = ['Domestik', 'Non-domestik']
@@ -152,8 +163,8 @@ maskapai_input = ttk.Combobox(input_frame, width=37)
 maskapai_input['state'] = 'readonly'
 
 kelas_input = ttk.Combobox(input_frame, width=37)
-kelas_input['values'] = ['Ekonomi', 'Bisnis', 'Eksekutif']
 kelas_input['state'] = 'readonly'
+kelas_input.bind('<<ComboboxSelected>>', ganti_list_waktu_dan_maskapai)
 
 
 jenis_input.place(x=140, y=50)
