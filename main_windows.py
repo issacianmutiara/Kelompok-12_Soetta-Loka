@@ -24,13 +24,6 @@ with open('data_maskapai.csv') as file_csv:
         if row[0] != 'NO':
             maskapai.append(row)
 
-kelas   = []
-with open('kelas_maskapai.csv') as file_csv:
-    reader_csv = reader(file_csv, delimiter=',')
-    for row in reader_csv:
-        if row[0] != 'NO':
-            maskapai.append(row)
-
 def frame_1(frame):
     frame.tkraise()
 
@@ -142,9 +135,14 @@ def ganti_list_waktu_dan_maskapai(e):
             values.append(row[1] + ' (rute ' + row[2] +')')
     maskapai_input['values'] = values
 
-#def harga_kelas_maskapai(e):
+def harga_kelas(e):
     values = []
-
+    for row in kelas_input :
+        if kelas_input.get() == 'Ekonomi' :
+            eko = 1
+            bis = 2
+            eks = 3
+#aku bingung hum disini
 
 
 jenis_input = ttk.Combobox(input_frame, width=37)
@@ -163,8 +161,9 @@ maskapai_input = ttk.Combobox(input_frame, width=37)
 maskapai_input['state'] = 'readonly'
 
 kelas_input = ttk.Combobox(input_frame, width=37)
+kelas_input['values'] = ['Ekonomi', 'Bisnis', 'Eksekutif']
 kelas_input['state'] = 'readonly'
-kelas_input.bind('<<ComboboxSelected>>', ganti_list_waktu_dan_maskapai)
+
 
 
 jenis_input.place(x=140, y=50)
