@@ -24,6 +24,7 @@ with open('data_maskapai.csv') as file_csv:
         if row[0] != 'NO':
             maskapai.append(row)
 
+
 def frame_1(frame):
     frame.tkraise()
 
@@ -72,17 +73,17 @@ label_ttl = Label(main_frame, text='TTL', bg='black', fg='#8cc53d', font='Helvet
     .grid(row=2, column=0, sticky='w')
 label_noktp = Label(main_frame, text='No. KTP', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=3, column=0, sticky='w')
-label_anggota = Label(main_frame, text='No. Keanggotaan', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+label_alamat = Label(main_frame, text='Alamat', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=4, column=0, sticky='w')
 
 input_nama = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
 input_ttl = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
 input_noktp = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
-input_anggota = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
+input_alamat = Entry(main_frame, width=40, borderwidth=3, fg='#8cc53d', bg='black', font='Helvetica 10')
 input_nama.grid(row=1, column=1, columnspan=3)
 input_ttl.grid(row=2, column=1, columnspan=3)
 input_noktp.grid(row=3, column=1, columnspan=3)
-input_anggota.grid(row=4, column=1, columnspan=3)
+input_alamat.grid(row=4, column=1, columnspan=3)
 
 
 def cek_data1():
@@ -110,9 +111,9 @@ tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place
 Label(input_frame, text='On-Booking Site', font='Helvetica 15 bold').place(x=170, y=5)
 Label(input_frame, text='Jenis Penerbangan').place(x=0, y=50)
 Label(input_frame, text='Tujuan').place(x=0, y=75)
-Label(input_frame, text='Waktu keberangkatan').place(x=0, y=100)
+Label(input_frame, text='Waktu Keberangkatan').place(x=0, y=100)
 Label(input_frame, text='Maskapai').place(x=0, y=125)
-Label(input_frame, text='Kelas penerbangan').place(x=0, y=150)
+Label(input_frame, text='Kelas Penerbangan').place(x=0, y=150)
 
 def ganti_list_tujuan(e):
     values = []
@@ -151,7 +152,9 @@ maskapai_input = ttk.Combobox(input_frame, width=37)
 maskapai_input['state'] = 'readonly'
 
 kelas_input = ttk.Combobox(input_frame, width=37)
+kelas_input['values'] = ['Ekonomi', 'Bisnis', 'Eksekutif']
 kelas_input['state'] = 'readonly'
+
 
 jenis_input.place(x=140, y=50)
 tujuan_input.place(x=140, y=75)
