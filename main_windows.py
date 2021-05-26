@@ -24,6 +24,13 @@ with open('data_maskapai.csv') as file_csv:
         if row[0] != 'NO':
             maskapai.append(row)
 
+hotel = []
+with open('hotel.csv') as file_csv:
+    reader_csv = reader(file_csv, delimiter=',')
+    for row in reader_csv:
+        if row[0] != 'NO':
+            hotel.append(row)
+
 def frame_1(frame):
     frame.tkraise()
 
@@ -111,7 +118,8 @@ def cek_data1():
 
 
 tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place(x=120, y=150)
-
+tombol3 = Button(issa_frame, text='Lewati', width=10, command=cek_data1).place(x=100, y=150)
+tombol4 = Button(issa_frame, text='Pilih', width=10, command=cek_data1).place(x=250, y=150)
 
 # frame 2, input frame
 Label(input_frame, text='On-Booking Site', font='Helvetica 15 bold').place(x=170, y=5)
@@ -121,12 +129,17 @@ Label(input_frame, text='Waktu Keberangkatan').place(x=0, y=100)
 Label(input_frame, text='Maskapai').place(x=0, y=125)
 Label(input_frame, text='Kelas Penerbangan').place(x=0, y=150)
 
-def ganti_list_tujuan(e):
+def ganti_list_tujuan_dan_hotel(e):
     values = []
     for row in tujuan:
         if row[1] == jenis_input.get():
             values.append(row[2])
     tujuan_input['values'] = values
+    values = []
+    for row in hotel:
+        if row[2] == jenis_input.get():
+            values.append(row[1])
+    hotel_input['values'] = values
 
 def ganti_list_waktu_dan_maskapai(e):
     values = []
@@ -146,16 +159,15 @@ def harga_kelas(e):
     values = []
     for row in kelas_input :
         if kelas_input.get() == 'Ekonomi' :
-            eko = 1
-            bis = 2
-            eks = 3
-#aku bingung hum disini
+            eko=1
+
+#aku bingung deh disini
 
 
 jenis_input = ttk.Combobox(input_frame, width=37)
 jenis_input['values'] = ['Domestik', 'Non-domestik']
 jenis_input['state'] = 'readonly'
-jenis_input.bind('<<ComboboxSelected>>', ganti_list_tujuan)
+jenis_input.bind('<<ComboboxSelected>>', ganti_list_tujuan_dan_hotel)
 
 tujuan_input = ttk.Combobox(input_frame, width=37)
 tujuan_input['state'] = 'readonly'
@@ -171,6 +183,9 @@ kelas_input = ttk.Combobox(input_frame, width=37)
 kelas_input['values'] = ['Ekonomi', 'Bisnis', 'Eksekutif']
 kelas_input['state'] = 'readonly'
 
+hotel_input = ttk.Combobox(issa_frame, width=37)
+hotel_input['state'] = 'readonly'
+
 
 
 jenis_input.place(x=140, y=50)
@@ -178,11 +193,15 @@ tujuan_input.place(x=140, y=75)
 waktu_input.place(x=140, y=100)
 maskapai_input.place(x=140, y=125)
 kelas_input.place(x=140, y=150)
+hotel_input.place(x=100, y=80)
 
 Button(input_frame, text='Next', width=10, command=lambda: frame_1(main_frame)).place(x=140, y=175)
 
 # frame pesenan issa
-Label(issa_frame, text='sini gaes\nsilahkan diisi\nhehehe', font='Arial 20 bold').place(x=0, y=0)
+Label(issa_frame, text='Hot Deals', font='Arial 20 bold').place(x=190, y=5)
+Label(issa_frame, text='Nikmati hotel terbaik dengan promo menarik', font='Arial 12').place(x=110, y=40)
+Label(issa_frame, text='Hotel').place(x=0, y=80)
+
 
 frame_1(main_page)
 root.mainloop()
