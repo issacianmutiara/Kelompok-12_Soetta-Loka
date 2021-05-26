@@ -52,7 +52,7 @@ issa_frame.grid(row=0, column=0, sticky='nsew')
 
 # kalau mau nambah frame, masukin ke list ini ya
 myFrame = [main_page, main_frame, input_frame, issa_frame]
-for frame in (myFrame):
+for frame in myFrame:
     frame.grid(row=0, column=0, sticky='nsew')
 
 # main page
