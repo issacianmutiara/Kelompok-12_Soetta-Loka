@@ -46,8 +46,13 @@ main_frame = Frame(root)
 main_frame.grid(row=0, column=0, sticky='nsew')
 input_frame = Frame(root)
 input_frame.grid(row=0, column=0, sticky='nsew')
+issa_frame = Frame(root)
+issa_frame.grid(row=0, column=0, sticky='nsew')
 
-for frame in (main_page, main_frame, input_frame):
+
+# kalau mau nambah frame, masukin ke list ini ya
+myFrame = [main_page, main_frame, input_frame, issa_frame]
+for frame in (myFrame):
     frame.grid(row=0, column=0, sticky='nsew')
 
 # main page
@@ -100,7 +105,9 @@ def cek_data1():
     Label(main_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Alamat').place(x=0, y=277)
     Label(main_frame, text=': ' + input_alamat.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
         .place(x=120, y=277)
-#    tombol2 = Button(main_frame, text='Input', width=10, command=lambda: frame_1(main_frame)).place(x=120, y=305)
+        #  kalau mau ngubah tombol disini saa, posisinya ini di frame ketiga
+    tombol2 = Button(main_frame, text='Input', width=10, command=lambda: frame_1(issa_frame)).place(x=120, y=305)
+
 
 
 tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place(x=120, y=150)
@@ -174,6 +181,8 @@ kelas_input.place(x=140, y=150)
 
 Button(input_frame, text='Next', width=10, command=lambda: frame_1(main_frame)).place(x=140, y=175)
 
+# frame pesenan issa
+Label(issa_frame, text='sini gaes\nsilahkan diisi\nhehehe', font='Arial 20 bold').place(x=0, y=0)
 
 frame_1(main_page)
 root.mainloop()
