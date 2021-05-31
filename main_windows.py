@@ -55,10 +55,12 @@ input_frame = Frame(root)
 input_frame.grid(row=0, column=0, sticky='nsew')
 issa_frame = Frame(root)
 issa_frame.grid(row=0, column=0, sticky='nsew')
+bayar_frame = Frame(root)
+bayar_frame.grid(row=0, column=0, sticky='nsew')
 
 
 # kalau mau nambah frame, masukin ke list ini ya
-myFrame = [main_page, main_frame, input_frame, issa_frame]
+myFrame = [main_page, main_frame, input_frame, issa_frame, bayar_frame]
 for frame in myFrame:
     frame.grid(row=0, column=0, sticky='nsew')
 
@@ -119,7 +121,7 @@ def cek_data1():
 
 tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place(x=120, y=150)
 tombol3 = Button(issa_frame, text='Lewati', width=10, command=cek_data1).place(x=100, y=150)
-tombol4 = Button(issa_frame, text='Pilih', width=10, command=cek_data1).place(x=250, y=150)
+tombol4 = Button(issa_frame, text='Pilih', width=10, command=lambda: frame_1(bayar_frame)).place(x=250, y=150)
 
 # frame 2, input frame
 Label(input_frame, text='On-Booking Site', font='Helvetica 15 bold').place(x=170, y=5)
@@ -201,6 +203,12 @@ Button(input_frame, text='Next', width=10, command=lambda: frame_1(main_frame)).
 Label(issa_frame, text='Hot Deals', font='Arial 20 bold').place(x=190, y=5)
 Label(issa_frame, text='Nikmati hotel terbaik dengan promo menarik', font='Arial 12').place(x=110, y=40)
 Label(issa_frame, text='Hotel').place(x=0, y=80)
+
+#frame bayar
+Label(bayar_frame, text='Payment', font='Arial 20 bold').place(x=190, y=5)
+Label(bayar_frame, text='Pilih metode pembayaran', font='Arial 12').place(x=150, y=40)
+Label(bayar_frame, text='Bayar').place(x=0, y=80)
+
 
 
 frame_1(main_page)
