@@ -80,24 +80,27 @@ top_label = Label(main_frame, text='Selamat Datang di Soetta-Loka\nMasukkan data
                   bg='black', fg='#8cc53d', font='Helvetica 15 bold')
 top_label.grid(row=0, column=1, sticky='nsew')
 
-label_nama = Label(main_frame, text='Nama', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+label_jumlah = Label(main_frame, text='Jumlah', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=1, column=0, sticky='w')
-label_ttl = Label(main_frame, text='TTL', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+label_nama = Label(main_frame, text='Nama', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=2, column=0, sticky='w')
-label_noktp = Label(main_frame, text='No. KTP', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+label_ttl = Label(main_frame, text='TTL', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=3, column=0, sticky='w')
-label_alamat = Label(main_frame, text='Alamat', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+label_noktp = Label(main_frame, text='No.KTP', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
     .grid(row=4, column=0, sticky='w')
+label_alamat = Label(main_frame, text='Alamat', bg='black', fg='#8cc53d', font='Helvetica 10 bold')\
+    .grid(row=5, column=0, sticky='w')
 
+input_jumlah = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
 input_nama = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
 input_ttl = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
 input_noktp = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
 input_alamat = Entry(main_frame, width=40, borderwidth=3, fg='black', bg='white', font='Helvetica 10')
-input_nama.grid(row=1, column=1, columnspan=3)
-input_ttl.grid(row=2, column=1, columnspan=3)
-input_noktp.grid(row=3, column=1, columnspan=3)
-input_alamat.grid(row=4, column=1, columnspan=3)
-
+input_jumlah.grid(row=1, column=1, columnspan=3)
+input_nama.grid(row=2, column=1, columnspan=3)
+input_ttl.grid(row=3, column=1, columnspan=3)
+input_noktp.grid(row=4, column=1, columnspan=3)
+input_alamat.grid(row=5, column=1, columnspan=3)
 
 def cek_data1():
     Label(main_frame, text='Data Diri', font='Helvetica 13 bold', fg='#8cc53d', bg='black').place(x=240, y=175)
@@ -119,8 +122,8 @@ def cek_data1():
 
 
 
-tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place(x=120, y=150)
-tombol3 = Button(issa_frame, text='Lewati', width=10, command=cek_data1).place(x=100, y=150)
+tombol1 = Button(main_frame, text='Cek Data', width=10, command=cek_data1).place(x=350, y=100)
+tombol3 = Button(issa_frame, text='Lewati', width=10, command=lambda: frame_1(bayar_frame)).place(x=100, y=150)
 tombol4 = Button(issa_frame, text='Pilih', width=10, command=lambda: frame_1(bayar_frame)).place(x=250, y=150)
 
 # frame 2, input frame
