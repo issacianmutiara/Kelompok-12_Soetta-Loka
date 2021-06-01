@@ -75,7 +75,10 @@ pesan_btm.place(x=250, y=450, anchor='center')
 
 
 # frame 1
-Label(main_frame, image=logo_mainpage_ico, bd=0, compound=CENTER).place(x=0, y=0)
+logo_mainframe = Image.open('2.png')
+logo_mainframe_ico = ImageTk.PhotoImage(logo_mainframe)
+Label(main_frame, image=logo_mainframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
+
 top_label = Label(main_frame, text='Selamat Datang di Soetta-Loka\nMasukkan data diri anda!',
                   bg='black', fg='#8cc53d', font='Helvetica 15 bold')
 top_label.grid(row=0, column=1, sticky='nsew')
@@ -127,6 +130,10 @@ tombol3 = Button(issa_frame, text='Lewati', width=10, command=lambda: frame_1(ba
 tombol4 = Button(issa_frame, text='Pilih', width=10, command=lambda: frame_1(bayar_frame)).place(x=250, y=150)
 
 # frame 2, input frame
+logo_inputframe = Image.open('1.png')
+logo_inputframe_ico = ImageTk.PhotoImage(logo_inputframe)
+Label(input_frame, image=logo_inputframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
+
 Label(input_frame, text='On-Booking Site', font='Helvetica 15 bold').place(x=170, y=5)
 Label(input_frame, text='Jenis Penerbangan').place(x=0, y=50)
 Label(input_frame, text='Tujuan').place(x=0, y=75)
@@ -208,6 +215,10 @@ Label(issa_frame, text='Nikmati hotel terbaik dengan promo menarik', font='Arial
 Label(issa_frame, text='Hotel').place(x=0, y=80)
 
 #frame bayar
+logo_bayarframe = Image.open('4.png')
+logo_bayarframe_ico = ImageTk.PhotoImage(logo_bayarframe)
+Label(bayar_frame, image=logo_bayarframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
+
 Label(bayar_frame, text='Payment', font='Arial 20 bold').place(x=190, y=5)
 Label(bayar_frame, text='Pilih metode pembayaran', font='Arial 12').place(x=150, y=40)
 Label(bayar_frame, text='Bayar').place(x=0, y=80)
