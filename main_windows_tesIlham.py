@@ -477,12 +477,19 @@ tombol_bayar1.place(x=150, y=110)
 tombol12 = Button(lewati_frame, text='Next', width=10, command=lambda: frame_1(berhasil_frame)).place(x=230, y=295)
 
 # FRAME 5 Transaksi Berhasil
+logo_berhasilframe = Image.open('5.png')
+logo_berhasilframe_ico = ImageTk.PhotoImage(logo_berhasilframe)
+Label(berhasil_frame, image=logo_berhasilframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
 Label(berhasil_frame, text='Transaksi Berhasil', font='Helvetica 20 bold').place(x=130, y=180)
 Label(berhasil_frame, text='Silahkan Print Tiket', font='Helvetica 20 bold').place(x=130, y=210)
 
 tombol7 = Button(berhasil_frame, text='Next', width=10, command=lambda: frame_1(tiket_frame)).place(x=220, y=295)
 
 # FRAME 6 TIKET
+logo_tiketframe = Image.open('6.png')
+logo_tiketframe_ico = ImageTk.PhotoImage(logo_tiketframe)
+Label(tiket_frame, image=logo_tiketframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
+
 Label(tiket_frame, text='Informasi Ticket', font='Helvetica 20 bold').place(x=140, y=5)
 
 
