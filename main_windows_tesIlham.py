@@ -494,12 +494,15 @@ def info_tiket():
     Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Nama').place(x=0, y=180)
     Label(tiket_frame, text=': ' + input_nama.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
         .place(x=120, y=180)
-    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Tujuan').place(x=0, y=210)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Maskapai').place(x=0, y=210)
     Label(tiket_frame, text=': ' + maskapai_input.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
         .place(x=120, y=210)
     Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Waktu').place(x=0, y=240)
     Label(tiket_frame, text=': ' + waktu_input.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black')\
         .place(x=120, y=240)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Tujuan').place(x=0, y=270)
+    Label(tiket_frame, text=': ' + tujuan_input.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
+        .place(x=120, y=270)
     # Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Seat').place(x=0, y=270)
     # Label(tiket_frame, text=': ' + seat_penumpang.pack(), font='Helvetica 10 bold', fg='#8cc53d', bg='black').
     # place(x=120, y=270)
