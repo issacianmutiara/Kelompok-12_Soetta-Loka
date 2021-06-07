@@ -1,0 +1,9 @@
+Program tetap berjalan walaupun input kosong, 
+dan output menjadi kososng pula
+silakan diperbaiki
+Semangatt pasti bisa!
+
+
+
+
+KEEP UP THE GOOD WORK!!
