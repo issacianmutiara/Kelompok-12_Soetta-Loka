@@ -113,97 +113,44 @@ def perhitunganHarga():
             hargaMaskapaiPilihan.append(dataMaskapai[11])
         elif tujuan_input.get() == 'Jakarta - Surabaya':
             hargaMaskapaiPilihan.append(dataMaskapai[12])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
+        else :
             hargaMaskapaiPilihan.append(dataMaskapai[13])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[14])
-        else:
-            hargaMaskapaiPilihan.append(dataMaskapai[15])
     elif maskapai_input.get() == 'Batik Air':
         if tujuan_input.get() == 'Jakarta - Solo':
-            hargaMaskapaiPilihan.append(dataMaskapai[16])
+            hargaMaskapaiPilihan.append(dataMaskapai[14])
         elif tujuan_input.get() == 'Jakarta - Denpasar':
-            hargaMaskapaiPilihan.append(dataMaskapai[17])
+            hargaMaskapaiPilihan.append(dataMaskapai[15])
         elif tujuan_input.get() == 'Jakarta - Makassar':
-            hargaMaskapaiPilihan.append(dataMaskapai[18])
+            hargaMaskapaiPilihan.append(dataMaskapai[16])
         elif tujuan_input.get() == 'Jakarta - Samarinda':
-            hargaMaskapaiPilihan.append(dataMaskapai[19])
+            hargaMaskapaiPilihan.append(dataMaskapai[17])
         elif tujuan_input.get() == 'Jakarta - Surabaya':
-            hargaMaskapaiPilihan.append(dataMaskapai[20])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
-            hargaMaskapaiPilihan.append(dataMaskapai[21])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[22])
+            hargaMaskapaiPilihan.append(dataMaskapai[18])
         else:
-            hargaMaskapaiPilihan.append(dataMaskapai[23])
+            hargaMaskapaiPilihan.append(dataMaskapai[19])
     elif maskapai_input.get() == 'Citilink':
         if tujuan_input.get() == 'Jakarta - Solo':
+            hargaMaskapaiPilihan.append(dataMaskapai[20])
+        elif tujuan_input.get() == 'Jakarta - Denpasar':
+            hargaMaskapaiPilihan.append(dataMaskapai[21])
+        elif tujuan_input.get() == 'Jakarta - Makassar':
+            hargaMaskapaiPilihan.append(dataMaskapai[22])
+        elif tujuan_input.get() == 'Jakarta - Samarinda':
+            hargaMaskapaiPilihan.append(dataMaskapai[23])
+        else:
             hargaMaskapaiPilihan.append(dataMaskapai[24])
-        elif tujuan_input.get() == 'Jakarta - Denpasar':
-            hargaMaskapaiPilihan.append(dataMaskapai[25])
-        elif tujuan_input.get() == 'Jakarta - Makassar':
-            hargaMaskapaiPilihan.append(dataMaskapai[26])
-        elif tujuan_input.get() == 'Jakarta - Samarinda':
-            hargaMaskapaiPilihan.append(dataMaskapai[27])
-        elif tujuan_input.get() == 'Jakarta - Surabaya':
-            hargaMaskapaiPilihan.append(dataMaskapai[28])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
-            hargaMaskapaiPilihan.append(dataMaskapai[29])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[30])
-        else:
-            hargaMaskapaiPilihan.append(dataMaskapai[31])
     elif maskapai_input.get() == 'AirAsia':
-        if tujuan_input.get() == 'Jakarta - Solo':
-            hargaMaskapaiPilihan.append(dataMaskapai[32])
-        elif tujuan_input.get() == 'Jakarta - Denpasar':
-            hargaMaskapaiPilihan.append(dataMaskapai[33])
-        elif tujuan_input.get() == 'Jakarta - Makassar':
-            hargaMaskapaiPilihan.append(dataMaskapai[34])
-        elif tujuan_input.get() == 'Jakarta - Samarinda':
-            hargaMaskapaiPilihan.append(dataMaskapai[35])
-        elif tujuan_input.get() == 'Jakarta - Surabaya':
-            hargaMaskapaiPilihan.append(dataMaskapai[36])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
-            hargaMaskapaiPilihan.append(dataMaskapai[37])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[38])
+        if tujuan_input.get() == 'Jakarta - Denpasar':
+            hargaMaskapaiPilihan.append(dataMaskapai[25])
         else:
-            hargaMaskapaiPilihan.append(dataMaskapai[39])
+            hargaMaskapaiPilihan.append(dataMaskapai[26])
     elif maskapai_input.get() == 'Singapore':
-        if tujuan_input.get() == 'Jakarta - Solo':
-            hargaMaskapaiPilihan.append(dataMaskapai[40])
-        elif tujuan_input.get() == 'Jakarta - Denpasar':
-            hargaMaskapaiPilihan.append(dataMaskapai[41])
-        elif tujuan_input.get() == 'Jakarta - Makassar':
-            hargaMaskapaiPilihan.append(dataMaskapai[42])
-        elif tujuan_input.get() == 'Jakarta - Samarinda':
-            hargaMaskapaiPilihan.append(dataMaskapai[43])
-        elif tujuan_input.get() == 'Jakarta - Surabaya':
-            hargaMaskapaiPilihan.append(dataMaskapai[44])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
-            hargaMaskapaiPilihan.append(dataMaskapai[45])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[46])
+        if tujuan_input.get() == 'Jakarta - Singapura':
+            hargaMaskapaiPilihan.append(dataMaskapai[27])
         else:
-            hargaMaskapaiPilihan.append(dataMaskapai[47])
+            hargaMaskapaiPilihan.append(dataMaskapai[28])
     else:
-        if tujuan_input.get() == 'Jakarta - Solo':
-            hargaMaskapaiPilihan.append(dataMaskapai[48])
-        elif tujuan_input.get() == 'Jakarta - Denpasar':
-            hargaMaskapaiPilihan.append(dataMaskapai[49])
-        elif tujuan_input.get() == 'Jakarta - Makassar':
-            hargaMaskapaiPilihan.append(dataMaskapai[50])
-        elif tujuan_input.get() == 'Jakarta - Samarinda':
-            hargaMaskapaiPilihan.append(dataMaskapai[51])
-        elif tujuan_input.get() == 'Jakarta - Surabaya':
-            hargaMaskapaiPilihan.append(dataMaskapai[52])
-        elif tujuan_input.get() == 'Jakarta - Singapura':
-            hargaMaskapaiPilihan.append(dataMaskapai[53])
-        elif tujuan_input.get() == 'Jakarta - Hongkong':
-            hargaMaskapaiPilihan.append(dataMaskapai[54])
-        else:
-            hargaMaskapaiPilihan.append(dataMaskapai[55])
+            hargaMaskapaiPilihan.append(dataMaskapai[29])
     if hotel_input.get() == 'Hotel Aston':
         hargaHotelPilihan.append(dataHotel[0])
     elif hotel_input.get() == 'Hotel Horison':
