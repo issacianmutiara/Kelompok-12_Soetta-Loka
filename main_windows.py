@@ -182,27 +182,38 @@ def info_tiket():
     Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Waktu').place(x=0, y=240)
     Label(tiket_frame, text=': ' + waktu_input.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
         .place(x=120, y=240)
-
-    Button(tiket_frame, text='Selesai', width=10, command=lambda: frame_utama(tiket_frame)).place(x=220, y=320)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Tujuan').place(x=0, y=270)
+    Label(tiket_frame, text=': ' + tujuan_input.get(), font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
+        .place(x=120, y=270)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Flight').place(x=0, y=300)
+    Label(tiket_frame, text=': ' + 'GA0364', font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
+        .place(x=120, y=300)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Seat').place(x=0, y=330)
+    Label(tiket_frame, text=': ' + '27A', font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
+        .place(x=120, y=330)
+    Label(tiket_frame, font='Helvetica 10 bold', fg='#8cc53d', bg='black', text='Pintu Gate').place(x=0, y=360)
+    Label(tiket_frame, text=': ' + '8', font='Helvetica 10 bold', fg='#8cc53d', bg='black') \
+        .place(x=120, y=360)
+    Button(tiket_frame, text='Selesai', width=10, command=lambda: frame_utama(tiket_frame)).place(x=220, y=350)
 
 
 def hitung_harga1():
     if kelas_input.get() == 'Ekonomi':
-        harga_total1 = int(int(hargaMaskapaiPilihan[0]) * 0.9) * int(input_jumlah.get())
+        harga_total1 = int(int(hargaMaskapaiPilihan[0]) * 0.9)
     elif kelas_input.get() == 'Bisnis':
-        harga_total1 = (int(int(hargaMaskapaiPilihan[0]) * 0.9)) * 2 * int(input_jumlah.get())
+        harga_total1 = (int(int(hargaMaskapaiPilihan[0]) * 0.9)) * 2
     else:
-        harga_total1 = (int(int(hargaMaskapaiPilihan[0]) * 0.9)) * 3 * int(input_jumlah.get())
+        harga_total1 = (int(int(hargaMaskapaiPilihan[0]) * 0.9)) * 3
     tampung_harga1.append(harga_total1)
 
 
 def hitung_harga2():
     if kelas_input.get() == 'Ekonomi':
-        harga_total2 = int(hargaMaskapaiPilihan[0]) * int(input_jumlah.get())
+        harga_total2 = int(hargaMaskapaiPilihan[0])
     elif kelas_input.get() == 'Bisnis':
-        harga_total2 = (int(hargaMaskapaiPilihan[0])) * 2 * int(input_jumlah.get())
+        harga_total2 = (int(hargaMaskapaiPilihan[0])) * 2
     else:
-        harga_total2 = (int(hargaMaskapaiPilihan[0])) * 3 * int(input_jumlah.get())
+        harga_total2 = (int(hargaMaskapaiPilihan[0])) * 3
     tampung_harga2.append(harga_total2)
 
 
@@ -211,11 +222,10 @@ def tiket_bill():
     hitung_harga1()
     Label(bayar_frame, text='TICKET BILL').place(x=50, y=160)
     Label(bayar_frame, text='Tagihan yang perlu Anda bayar :').place(x=0, y=195)
-    Label(bayar_frame, text='Jumlah tiket = ' + input_jumlah.get()).place(x=0, y=220)
-    Label(bayar_frame, text='Kelas Penerbangan = ' + kelas_input.get()).place(x=0, y=245)
-    Label(bayar_frame, text='Tiket Maskapai = Rp' + str(hargaMaskapaiPilihan[0])).place(x=0, y=270)
-    Label(bayar_frame, text='Tiket Maskapai Total = Rp' + str(tampung_harga1[0])).place(x=0, y=295)
-    Label(bayar_frame, text='Penginapan = Rp' + str(hargaHotelPilihan[0])).place(x=0, y=320)
+    Label(bayar_frame, text='Kelas Penerbangan = ' + kelas_input.get()).place(x=0, y=220)
+    Label(bayar_frame, text='Tiket Maskapai = Rp' + str(hargaMaskapaiPilihan[0])).place(x=0, y=245)
+    Label(bayar_frame, text='Tiket Maskapai Total = Rp' + str(tampung_harga1[0])).place(x=0, y=270)
+    Label(bayar_frame, text='Penginapan = Rp' + str(hargaHotelPilihan[0])).place(x=0, y=295)
     Label(bayar_frame, text='TOTAL : Rp' + str(int(hargaHotelPilihan[0]) + int(tampung_harga1[0]))).place(x=0, y=345)
     x = str(int(hargaHotelPilihan[0]) + int(tampung_harga1[0]))
     tampung_total1.append(x)
@@ -225,11 +235,10 @@ def tiket_bill_lewati():
     perhitungan_harga()
     hitung_harga2()
     Label(lewati_frame, text='Tagihan yang perlu Anda bayar :').place(x=150, y=150)
-    Label(lewati_frame, text='Jumlah tiket = ' + input_jumlah.get()).place(x=0, y=220)
-    Label(lewati_frame, text='Kelas Penerbangan = ' + kelas_input.get()).place(x=0, y=245)
-    Label(lewati_frame, text='Tiket Maskapai = Rp' + str(hargaMaskapaiPilihan[0])).place(x=0, y=270)
-    Label(lewati_frame, text='Tiket Maskapai Total = Rp' + str(tampung_harga2[0])).place(x=0, y=295)
-    Label(lewati_frame, text='TOTAL : Rp' + str(tampung_harga2[0])).place(x=0, y=320)
+    Label(lewati_frame, text='Kelas Penerbangan = ' + kelas_input.get()).place(x=0, y=220)
+    Label(lewati_frame, text='Tiket Maskapai = Rp' + str(hargaMaskapaiPilihan[0])).place(x=0, y=245)
+    Label(lewati_frame, text='Tiket Maskapai Total = Rp' + str(tampung_harga2[0])).place(x=0, y=270)
+    Label(lewati_frame, text='TOTAL : Rp' + str(tampung_harga2[0])).place(x=0, y=295)
     y = str(tampung_harga2[0])
     tampung_total2.append(y)
 
@@ -251,7 +260,6 @@ def cek_datadiri(check):
     Label(cek_data, text='Waktu Keberangkatan', font='Helvetica 10 bold').place(x=0, y=200)
     Label(cek_data, text='Maskapai', font='Helvetica 10 bold').place(x=0, y=225)
     Label(cek_data, text='Kelas Penerbangan', font='Helvetica 10 bold').place(x=0, y=250)
-    Label(cek_data, text='Jumlah Tiket', font='Helvetica 10 bold').place(x=0, y=275)
     if check == 'pilih_klik':
         Label(cek_data, text='Penginapan', font='Helvetica 10 bold').place(x=0, y=300)
         Label(cek_data, text='Metode Pembayaran', font='Helvetica 10 bold').place(x=0, y=325)
@@ -271,7 +279,6 @@ def cek_datadiri(check):
     Label(cek_data, text=waktu_input.get(), font='Helvetica 10').place(x=250, y=200)
     Label(cek_data, text=maskapai_input.get(), font='Helvetica 10').place(x=250, y=225)
     Label(cek_data, text=kelas_input.get(), font='Helvetica 10').place(x=250, y=250)
-    Label(cek_data, text=input_jumlah.get(), font='Helvetica 10').place(x=250, y=275)
     if check == 'pilih_klik':
         Label(cek_data, text=hotel_input.get(), font='Helvetica 10').place(x=250, y=300)
         Label(cek_data, text=bayar_input.get(), font='Helvetica 10').place(x=250, y=325)
@@ -354,22 +361,19 @@ logo_mainframe_ico = ImageTk.PhotoImage(logo_mainframe)
 Label(main_frame, image=logo_mainframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
 top_label = Label(main_frame, text='Masukkan data diri anda', font='Helvetica 15 bold') \
     .place(x=100, y=5)
-label_jumlah = Label(main_frame, text='Jumlah', font='Helvetica 10 bold').place(x=0, y=50)
-label_nama = Label(main_frame, text='Nama', font='Helvetica 10 bold').place(x=0, y=75)
-label_ttl = Label(main_frame, text='TTL', font='Helvetica 10 bold').place(x=0, y=100)
-label_noktp = Label(main_frame, text='No.KTP', font='Helvetica 10 bold').place(x=0, y=125)
-label_alamat = Label(main_frame, text='Alamat', font='Helvetica 10 bold').place(x=0, y=150)
+label_nama = Label(main_frame, text='Nama', font='Helvetica 10 bold').place(x=0, y=50)
+label_ttl = Label(main_frame, text='TTL', font='Helvetica 10 bold').place(x=0, y=75)
+label_noktp = Label(main_frame, text='No.KTP', font='Helvetica 10 bold').place(x=0, y=100)
+label_alamat = Label(main_frame, text='Alamat', font='Helvetica 10 bold').place(x=0, y=125)
 
-input_jumlah = Entry(main_frame, width=40)
 input_nama = Entry(main_frame, width=40)
 input_ttl = Entry(main_frame, width=40)
 input_noktp = Entry(main_frame, width=40)
 input_alamat = Entry(main_frame, width=40)
-input_jumlah.place(x=140, y=50)
-input_nama.place(x=140, y=75)
-input_ttl.place(x=140, y=100)
-input_noktp.place(x=140, y=125)
-input_alamat.place(x=140, y=150)
+input_nama.place(x=140, y=50)
+input_ttl.place(x=140, y=75)
+input_noktp.place(x=140, y=100)
+input_alamat.place(x=140, y=125)
 
 Button(main_frame, text='Selanjutnya', width=10, command=lambda: frame_utama(hotel_frame)).place(x=140, y=175)
 
@@ -464,7 +468,7 @@ bayar_input1['values'] = ['Transfer via virtual account', 'Kartu Kredit', 'Trans
 bayar_input1.place(x=50, y=80)
 
 Button(lewati_frame, text='Input metode', command=lambda: tiket_bill_lewati()).place(x=50, y=110)
-Button(lewati_frame, text='Selanjutnya', width=10, command=lambda: frame_utama(berhasil_frame)).place(x=100, y=295)
+Button(lewati_frame, text='Selanjutnya', width=10, command=lambda: frame_utama(berhasil_frame)).place(x=250, y=330)
 Button(lewati_frame, text='Cek data diri', width=10, command=lambda: cek_datadiri('lewati_klik')).place(x=250, y=295)
 
 # FRAME 5 Transaksi Berhasil
@@ -480,9 +484,9 @@ Button(berhasil_frame, text='Selanjutnya', width=10, command=lambda: frame_utama
 logo_tiketframe = Image.open('6.png')
 logo_tiketframe_ico = ImageTk.PhotoImage(logo_tiketframe)
 Label(tiket_frame, image=logo_tiketframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
-Label(tiket_frame, text='Informasi Ticket', font='Helvetica 20 bold').place(x=140, y=5)
-
-Button(tiket_frame, text='Lihat Ticket', width=10, command=info_tiket).place(x=220, y=80)
+Label(tiket_frame, text='Informasi Tiket', font='Helvetica 20 bold').place(x=140, y=5)
+Label(tiket_frame, text='The boarding gate will be closed 15 minutes before departure', font='Helvetica 12 bold').place(x=20, y=400)
+Button(tiket_frame, text='Lihat Tiket', width=10, command=info_tiket).place(x=220, y=80)
 
 # ++++++++++++++++++++++++++++++++++++++++++++++++ END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #  fg='#8cc53d'
