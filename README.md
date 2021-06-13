@@ -21,9 +21,6 @@ Berkas ['dom_nondom']
 Berkas ['hotel']
         Merupakan berkas pendukung program/database yang berisi nama nama hotel pada tujuan domestik dan non domestik beserta harga
 
-Berkas ['kelas_maskapai']
-        Merupakan berkas pendukung program/database yang berisi kelas penerbangan yaitu ekonomi, bisnis, dan eksekutif beserta bobot harga tiap kelas
-
 Berkas ['waktu_penerbangan']
         Merupakan berkas pendukung program/database yang berisi waktu penerbangan tiap tujuan, baik waktu take off maupun waktu landing
 
@@ -35,6 +32,18 @@ Berkas ['logo soettaloka']
 
 Berkas ['main_windows]
         Merupakan main file untuk menjalankan/running program Soetta-Loka
+Berkas ['1.png']
+        Merupakan gambar backgorund untuk page 2 : on booking
+Berkas ['2.png']
+        Merupakan gambar backgorund untuk page 3 : informasi data penumpang
+Berkas ['3.png']
+        Merupakan gambar backgorund untuk page 4 : hot deals
+Berkas ['4.png']
+        Merupakan gambar backgorund untuk page 5 : payment
+Berkas ['5.png']
+        Merupakan gambar backgorund untuk page 6 : pemberitahuan transaksi sudah berhasil
+Berkas ['6.png']
+        Merupakan gambar backgorund untuk page 7 : informasi tiket
 
 Berkas 'README.md'
         Merupakan penjelasan singkat isi dari repository
