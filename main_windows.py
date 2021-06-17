@@ -502,6 +502,6 @@ Label(tiket_frame, image=logo_tiketframe_ico, bd=0, compound=CENTER).place(x=0, 
 # ++++++++++++++++++++++++++++++++++++++++++++++++ END ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # frame_utama(main_page) digunakan untuk memunculkan frame main_page saat program pertama kali dijalankan
 # root.mainloop() adalah sintaks untuk gui tkinter agar gui tetap berjalan selama belum ada perintah destroy(tutup) ataupun user klik keluar
-# lambda kami gunakan untuk memberi fungsi anonim yang kami gunakan agar fungsi yang ada pada command tetap "bersembunyi" selama tombol belum diklik
+# lambda kami gunakan untuk memberi fungsi anonim agar fungsi yang ada pada command tetap "bersembunyi" selama tombol belum diklik
 frame_utama(main_page)
 root.mainloop()
