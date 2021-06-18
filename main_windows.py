@@ -218,6 +218,49 @@ def check_datadiri():
         frame_utama(hotel_frame)
 
 
+# memunculkan pesan apabila user tidak menginput pada menu metode pembayaran
+def check_metode():
+    if bayar_input.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        tiket_bill()
+
+
+def check_metode1():
+    if bayar_input.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        cek_datadiri('pilih_klik')
+
+
+def check_metode_lewati():
+    if bayar_input1.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        tiket_bill_lewati()
+
+
+def check_metode2():
+    if bayar_input1.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        cek_datadiri('lewati_klik')
+
+
+def check_metode3():
+    if bayar_input.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        frame_utama(berhasil_frame)
+
+
+def check_metode4():
+    if bayar_input1.get() == '':
+        messagebox.showwarning('Peringatan', 'Silahkan masukkan metode pembayaran!')
+    else:
+        frame_utama(berhasil_frame)
+
+
 # berisi frame apabila user memilih untuk mengambil hot deals
 def tiket_bill():
     perhitungan_harga()
@@ -461,10 +504,10 @@ bayar_input['state'] = 'readonly'
 bayar_input['values'] = ['Transfer Via Virtual Account', 'Kartu Kredit', 'Transfer Via Bank']
 bayar_input.place(x=100, y=80)
 
-Button(bayar_frame, text='Input metode', command=lambda: tiket_bill(), font=fontme).place(x=100, y=110)
-Button(bayar_frame, text='Selanjutnya', width=10, command=lambda: [frame_utama(berhasil_frame), parameter.append('pilih_klik')], font=fontme)\
+Button(bayar_frame, text='Input metode', command=lambda: check_metode(), font=fontme).place(x=100, y=110)
+Button(bayar_frame, text='Selanjutnya', width=10, command=lambda: [check_metode3(), parameter.append('pilih_klik')], font=fontme)\
     .place(x=150, y=325)
-Button(bayar_frame, text='Cek data diri', width=10, command=lambda: [cek_datadiri('pilih_klik')], font=fontme).place(x=250, y=325)
+Button(bayar_frame, text='Cek data diri', width=10, command=lambda: check_metode1(), font=fontme).place(x=250, y=325)
 Button(bayar_frame, text='Kembali', width=10, command=lambda: frame_utama(hotel_frame), font=fontme).place(x=350, y=325)
 
 # FRAME 4 Metode Pembayaran apabila user memilih untuk tidak memesan hotel
@@ -481,9 +524,9 @@ bayar_input1['state'] = 'readonly'
 bayar_input1['values'] = ['Transfer via virtual account', 'Kartu Kredit', 'Transfer via bank']
 bayar_input1.place(x=100, y=80)
 
-Button(lewati_frame, text='Input metode', command=lambda: tiket_bill_lewati(), font=fontme).place(x=100, y=110)
-Button(lewati_frame, text='Selanjutnya', width=10, command=lambda: [frame_utama(berhasil_frame), parameter.append('lewati_klik')], font=fontme).place(x=150, y=325)
-Button(lewati_frame, text='Cek data diri', width=10, command=lambda: [cek_datadiri('lewati_klik')], font=fontme).place(x=250, y=325)
+Button(lewati_frame, text='Input metode', command=lambda: check_metode_lewati(), font=fontme).place(x=100, y=110)
+Button(lewati_frame, text='Selanjutnya', width=10, command=lambda: [check_metode4(), parameter.append('lewati_klik')], font=fontme).place(x=150, y=325)
+Button(lewati_frame, text='Cek data diri', width=10, command=lambda: check_metode2(), font=fontme).place(x=250, y=325)
 Button(lewati_frame, text='Kembali', width=10, command=lambda: frame_utama(hotel_frame), font=fontme).place(x=350, y=325)
 
 # FRAME 5 Transaksi Berhasil, berisi wallpaper, tulisan, dan tombol
