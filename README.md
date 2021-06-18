@@ -11,6 +11,9 @@ Berkas ['Kelompok 12_Flowchart']
 
 Berkas ['ACC_12_Abyan_TUBES TAHAP 1]
         Merupakan laporan berisi usulan ide yang digunakan sebagai acuan pembuatan program
+    
+Berkas ['Kelompok 12_PPT']
+        Merupakan lampiran berkas Power Point berisi ringkasan laporan yang dikemas lebih menarik
 
 Berkas ['data_maskapai']
         Merupakan berkas pendukung program/database yang berisi nama pesawat, rute penerbangan, dan harga
@@ -54,6 +57,7 @@ Beberapa syarat yang diperlukan untuk running program :
 1. Pada komputer sudah terinstal Tkinter, untuk memastikan bisa terlebih dahulu membuka interpreter Python lalu ketik import_tkinter
 2. Pada komputer sudah terinstal PIL, jika belum maka buka command prompt lalu ketik pip install pillow
 3. Agar program dapat berjalan, maka download/miliki semua database yang sudah ter-upload di github dengan cara download ZIP, kemudian ekstrak file lalu buka file main_windows
+4. Pengguna perlu instal modul csv terlebih dahulu sebelum menjalankan program
 
 Cara memakai program :
 1. Setelah memenuhi persyaratan diatas, maka langkah selanjutnya adalah membuka file main_windows
