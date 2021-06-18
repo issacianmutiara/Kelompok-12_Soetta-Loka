@@ -347,7 +347,7 @@ def cek_datadiri(check):
 # berisi frame yang menunjukkan bahwa transaksi telah berhasil
 def transaksi_berhasil():
     Label(berhasil_frame, text='Transaksi Berhasil', font='Helvetica 15 bold').place(x=170, y=100)
-    Button(berhasil_frame, text='Lihat Ticket', font=fontme, width=10, command=lambda: [frame_utama(tiket_frame), lihat_tiket()]).place(x=235, y=150)
+    Button(berhasil_frame, text='Lihat Ticket', font=fontme, width=10, command=lambda: [frame_utama(tiket_frame), lihat_tiket()]).place(x=220, y=150)
 
 
 # berisi sintaks random untuk kode tiket dan juga berisi frame terakhir yaitu info tiket
@@ -534,7 +534,7 @@ logo_berhasilframe = Image.open('5.png')
 logo_berhasilframe_ico = ImageTk.PhotoImage(logo_berhasilframe)
 Label(berhasil_frame, image=logo_berhasilframe_ico, bd=0, compound=CENTER).place(x=0, y=0)
 Label(berhasil_frame, text='Silahkan Lakukan Pembayaran', font='Helvetica 15 bold').place(x=120, y=5)
-Button(berhasil_frame, text='Selanjutnya', font=fontme, width=10, command=lambda: transaksi_berhasil()).place(x=235, y=35)
+Button(berhasil_frame, text='Selanjutnya', font=fontme, width=10, command=lambda: transaksi_berhasil()).place(x=220, y=50)
 
 # FRAME 6 Info Tiket, berisi wallpaper, tulisan, dan tombol
 logo_tiketframe = Image.open('6.png')
